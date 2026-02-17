@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>~~*~~ xX_W1llz_Pr0f1l3_Xx ~~*~~</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=VT323&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --hot-pink: #ff00cc;
+      --lime: #00ff00;
+      --teal: #00ffff;
+      --purple: #9900cc;
+      --yellow: #ffff00;
+      --bg: #000033;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='24'%3E⭐%3C/text%3E%3C/svg%3E") 16 16, auto;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ctext y='30' font-size='20' opacity='0.08' fill='%23ff00cc'%3E★%3C/text%3E%3C/svg%3E");
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      color: var(--lime);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ---- MARQUEE HEADER ---- */
+    .top-marquee {
+      background: var(--hot-pink);
+      color: var(--yellow);
+      font-size: 22px;
+      font-weight: bold;
+      padding: 6px 0;
+      white-space: nowrap;
+      border-bottom: 4px dashed var(--teal);
+      border-top: 4px dashed var(--teal);
+    }
+
+    /* ---- GLITTER TITLE ---- */
+    .page-title {
+      text-align: center;
+      padding: 20px 10px 10px;
+      font-family: 'Pacifico', cursive;
+      font-size: 42px;
+      text-shadow:
+        0 0 8px var(--hot-pink),
+        0 0 20px var(--hot-pink),
+        3px 3px 0 var(--purple);
+      animation: glitter 1.2s infinite alternate;
+    }
+
+    @keyframes glitter {
+      0%   { color: var(--hot-pink); text-shadow: 0 0 10px var(--hot-pink), 3px 3px 0 var(--purple); }
+      33%  { color: var(--yellow);   text-shadow: 0 0 10px var(--yellow), 3px 3px 0 #ff6600; }
+      66%  { color: var(--teal);     text-shadow: 0 0 10px var(--teal), 3px 3px 0 #006699; }
+      100% { color: var(--lime);     text-shadow: 0 0 10px var(--lime), 3px 3px 0 #006600; }
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: var(--hot-pink);
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      animation: blink 0.9s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* ---- LAYOUT ---- */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px 40px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      grid-template-rows: auto;
+      gap: 14px;
+    }
+
+    /* ---- PANELS ---- */
+    .panel {
+      border: 3px solid var(--hot-pink);
+      background: rgba(0,0,80,0.85);
+      padding: 14px;
+      box-shadow: 0 0 12px var(--hot-pink), inset 0 0 8px rgba(255,0,204,0.1);
+    }
+
+    .panel-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      color: var(--yellow);
+      text-shadow: 1px 1px 0 #996600;
+      border-bottom: 2px dashed var(--teal);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* ---- PROFILE PIC ---- */
+    .profile-pic-wrap {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border: 6px double var(--hot-pink);
+      box-shadow: 0 0 18px var(--hot-pink);
+      background: #110033;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      animation: spinBob 4s ease-in-out infinite;
+    }
+
+    @keyframes spinBob {
+      0%, 100% { transform: rotate(-3deg) scale(1); }
+      50% { transform: rotate(3deg) scale(1.06); }
+    }
+
+    .online-now {
+      font-size: 16px;
+      color: var(--lime);
+      margin-top: 6px;
+    }
+
+    .online-now span { animation: blink 1s steps(1) infinite; }
+
+    /* ---- MOOD ---- */
+    .mood {
+      font-size: 16px;
+      color: var(--teal);
+      line-height: 1.6;
+    }
+
+    /* ---- ABOUT ME ---- */
+    .about-text {
+      color: var(--lime);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .about-text .highlight {
+      color: var(--hot-pink);
+      font-size: 22px;
+    }
+
+    /* ---- INTERESTS ---- */
+    .interests-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interest-tag {
+      background: var(--purple);
+      color: var(--yellow);
+      padding: 3px 10px;
+      border: 2px solid var(--hot-pink);
+      font-size: 16px;
+      transform: rotate(-1deg);
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .interest-tag:nth-child(even) { transform: rotate(1.5deg); background: #003366; color: var(--teal); }
+    .interest-tag:hover { transform: rotate(0) scale(1.1); }
+
+    /* ---- MUSIC PLAYER ---- */
+    .music-player {
+      background: #000;
+      border: 2px solid var(--lime);
+      padding: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .music-title-wrap {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .music-title {
+      color: var(--lime);
+      animation: scroll-text 6s linear infinite;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    @keyframes scroll-text {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .music-controls { font-size: 26px; letter-spacing: 8px; color: var(--hot-pink); margin-top: 6px; }
+
+    /* ---- COMMENTS ---- */
+    .comment {
+      border-top: 1px dashed var(--teal);
+      padding: 10px 0;
+      font-size: 16px;
+    }
+
+    .comment-author { color: var(--hot-pink); font-size: 18px; }
+    .comment-text   { color: var(--lime); }
+    .comment-date   { color: #666; font-size: 13px; }
+
+    /* ---- TOP 8 ---- */
+    .top8-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .friend-box {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .friend-avatar {
+      width: 60px;
+      height: 60px;
+      border: 3px solid var(--hot-pink);
+      background: #110033;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 4px;
+    }
+
+    .friend-name { color: var(--teal); font-size: 15px; }
+
+    /* ---- VISITOR COUNT ---- */
+    .visitor-count {
+      text-align: center;
+      font-size: 16px;
+      padding: 8px;
+      background: #000;
+      border: 2px solid var(--lime);
+      color: var(--lime);
+      letter-spacing: 3px;
+    }
+
+    .visitor-num { color: var(--yellow); font-size: 24px; font-weight: bold; }
+
+    /* ---- SPARKLES ---- */
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      font-size: 20px;
+      animation: floatUp 1.2s ease-out forwards;
+      z-index: 999;
+    }
+
+    @keyframes floatUp {
+      0%   { opacity: 1; transform: translateY(0) scale(1); }
+      100% { opacity: 0; transform: translateY(-80px) scale(0.3); }
+    }
+
+    /* ---- BOTTOM MARQUEE ---- */
+    .bottom-marquee {
+      background: var(--purple);
+      color: var(--lime);
+      font-size: 18px;
+      padding: 5px 0;
+      border-top: 4px dashed var(--yellow);
+      margin-top: 20px;
+      white-space: nowrap;
+    }
+
+    /* ---- LEFT COL SPAN ---- */
+    .left-col  { grid-column: 1; display: flex; flex-direction: column; gap: 14px; }
+    .right-col { grid-column: 2; display: flex; flex-direction: column; gap: 14px; }
+    .full-row  { grid-column: 1 / -1; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP MARQUEE -->
+  <marquee class="top-marquee" behavior="scroll" direction="left" scrollamount="5">
+    🌟 WELCOME 2 MY PAGE!!! 🌟 ur the 420,069th visitor!! 🌟 sign my guestbook b4 u leave!!! 🌟 OMG i cant believe ur HERE!!! 🌟 leave a comment!!!! 🌟 no drama plz 🌟
+  </marquee>
+
+  <!-- TITLE -->
+  <div class="page-title">~~*~~ xX_W1llz_C0nfl3wnc3_Xx ~~*~~</div>
+  <div class="subtitle">✨ pr0ud member of the documentation krew ✨</div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+
+      <!-- Profile -->
+      <div class="panel">
+        <div class="profile-pic-wrap">
+          <div class="profile-pic">🧑‍💻</div>
+          <div class="online-now">🟢 <span>ONLINE NOW!!</span></div>
+        </div>
+        <div class="panel-title">~*~ pr0file ~*~</div>
+        <div class="mood">
+          <strong style="color:var(--yellow)">Name:</strong> W1LL <br>
+          <strong style="color:var(--yellow)">Age:</strong> 2-fine 😏<br>
+          <strong style="color:var(--yellow)">Status:</strong> it's complic8d<br>
+          <strong style="color:var(--yellow)">Mood:</strong> 😤 annoyed (jira sprint)<br>
+          <strong style="color:var(--yellow)">L0cation:</strong> THE ZONE<br>
+          <strong style="color:var(--yellow)">L4st L0gin:</strong> 2 seconds ag0<br>
+        </div>
+      </div>
+
+      <!-- Music -->
+      <div class="panel">
+        <div class="panel-title">🎵 my s0ngz 🎵</div>
+        <div class="music-player">
+          <div class="music-title-wrap"><div class="music-title">♫ now playing: System of a Down - BYOB (extended remix) ♫</div></div>
+          <div class="music-controls">⏮ ⏸ ⏭</div>
+          <div style="color:#555; font-size:13px; margin-top:4px;">volume: [██████░░░░] 60%</div>
+        </div>
+      </div>
+
+      <!-- Visitor Count -->
+      <div class="panel">
+        <div class="panel-title">👁️ page v1ewz</div>
+        <div class="visitor-count">
+          y0u are visitor<br>
+          <span class="visitor-num">420,069</span>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="panel">
+        <div class="panel-title">💜 int3rests 💜</div>
+        <div class="interests-grid">
+          <span class="interest-tag">Godot 4</span>
+          <span class="interest-tag">AI Agents</span>
+          <span class="interest-tag">Claude</span>
+          <span class="interest-tag">Loop Hero</span>
+          <span class="interest-tag">9 Kings</span>
+          <span class="interest-tag">CrewAI</span>
+          <span class="interest-tag">SysML v2</span>
+          <span class="interest-tag">Obsidian</span>
+          <span class="interest-tag">Low Poly</span>
+          <span class="interest-tag">Fort Condor</span>
+          <span class="interest-tag">MCP Servers</span>
+          <span class="interest-tag">leet code 😤</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+
+      <!-- About Me -->
+      <div class="panel">
+        <div class="panel-title">~*~ ab0ut me ~*~</div>
+        <div class="about-text">
+          <p>
+            omg HII!! if u r reading this u probably clicked something u werent supposed 2
+            <span class="highlight">( ͡° ͜ʖ ͡°)</span> lolol congrats on finding my secret page!!
+          </p><br>
+          <p>
+            im just a guy who lurvs making AI d0 all his w0rk 4 him 😇 i 3ngineer prompts
+            4 a living basically lmao. my agents r better than ur agents, dont @ me.
+          </p><br>
+          <p>
+            <span class="highlight">if u steal my profile layout i will find u</span> 🔫
+          </p><br>
+          <p>
+            currently working on: <strong style="color:var(--teal)">getting Claude 2 write Godot scripts
+            while i play auto-battlers</strong>. the dream. living it.
+          </p><br>
+          <p style="color: var(--yellow)">
+            ~~~ life is short. ship the feature. ~~~
+          </p>
+        </div>
+      </div>
+
+      <!-- Top 8 -->
+      <div class="panel">
+        <div class="panel-title">💞 my top 8 💞</div>
+        <div class="top8-grid">
+          <div class="friend-box">
+            <div class="friend-avatar">🤖</div>
+            <div class="friend-name">Claude_AI</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">🎮</div>
+            <div class="friend-name">Loop_Hero69</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">🐍</div>
+            <div class="friend-name">Py_Th0n_4ev</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">🧙</div>
+            <div class="friend-name">xXGodotXx</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">💜</div>
+            <div class="friend-name">Obsidian_Grl</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">⚙️</div>
+            <div class="friend-name">CrewAI_Bff</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">🎨</div>
+            <div class="friend-name">StableDiff</div>
+          </div>
+          <div class="friend-box">
+            <div class="friend-avatar">☕</div>
+            <div class="friend-name">CoffeeMaker</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments -->
+      <div class="panel">
+        <div class="panel-title">💬 c0mmentz (leave 1!!)</div>
+
+        <div class="comment">
+          <div class="comment-author">xXDev_Queen_Becky_06Xx</div>
+          <div class="comment-text">omg ur page is SO kewl!! how did u make ur cursor do that?? add me!!!!! 💖💖</div>
+          <div class="comment-date">posted: Feb 14, 2007 @ 11:42pm</div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-author">TrU3_SkAtEr_Boi_2k7</div>
+          <div class="comment-text">dude ur top 8 is sus. y is an AI ur #1 friend lol loser 💀</div>
+          <div class="comment-date">posted: Feb 15, 2007 @ 1:15am</div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-author">xXDev_Queen_Becky_06Xx</div>
+          <div class="comment-text">OMG DONT LISTEN 2 HIM!!! he is soooo immature. ur page rox!!! 🌟</div>
+          <div class="comment-date">posted: Feb 15, 2007 @ 1:17am</div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-author">Jira_Ticket_#40291</div>
+          <div class="comment-text">hey this counts as scope creep. please update your sprint story points.</div>
+          <div class="comment-date">posted: just now</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FULL ROW: ABOUT MY CONFLUENCE SPACE -->
+    <div class="panel full-row">
+      <div class="panel-title">📖 about this space (4 real tho)</div>
+      <div class="about-text" style="font-size: 16px; line-height: 1.8;">
+        <marquee behavior="alternate" scrollamount="2" style="color: var(--hot-pink); font-size: 20px;">
+          🌟 u found the secret page!! u r officially one of the cool kidz 🌟
+        </marquee>
+        <br>
+        this page doesnt exist. ur not reading this. if u tell anyone u found it, i will deny everything.
+        close ur browser tab and forget this ever happened. blessed b those who respect the sacred
+        confluence space and leave no merge conflicts behind. go in peace. 🙏<br><br>
+        <span style="color:var(--yellow)">p.s.</span> if u got here from a link in the actual docs... lol. lmaooo. goodbye.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM MARQUEE -->
+  <marquee class="bottom-marquee" behavior="scroll" direction="right" scrollamount="4">
+    ❤️ best viewed in internet explorer 6 at 800x600 resolution ❤️ ~*~ made with love and notepad.exe ~*~ no hotlinking my graphics!!! ❤️
+  </marquee>
+
+  <!-- SPARKLE SCRIPT -->
+  <script>
+    const emojis = ['✨','⭐','💖','🌟','💜','🔥','💫','🎀'];
+    document.addEventListener('click', (e) => {
+      for (let i = 0; i < 5; i++) {
+        const s = document.createElement('div');
+        s.className = 'sparkle';
+        s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        s.style.left = (e.clientX + (Math.random()-0.5)*40) + 'px';
+        s.style.top  = (e.clientY + (Math.random()-0.5)*40) + 'px';
+        s.style.animationDelay = (Math.random()*0.3) + 's';
+        document.body.appendChild(s);
+        setTimeout(() => s.remove(), 1400);
+      }
+    });
+
+    // Visitor counter random drift
+    const el = document.querySelector('.visitor-num');
+    setInterval(() => {
+      const base = 420069;
+      el.textContent = (base + Math.floor(Math.random()*9)).toLocaleString();
+    }, 3000);
+  </script>
+
+</body>
+</html>
